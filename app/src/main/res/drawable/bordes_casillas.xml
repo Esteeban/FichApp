@@ -6,5 +6,5 @@
         android:left="10sp"
         android:right="10sp"
         android:top="10sp"/>
-    <corners android:radius="15sp" />
+    <corners android:radius="30sp" />
 </shape>

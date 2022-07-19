@@ -18,9 +18,32 @@
         android:theme="@style/Theme.FichApp"
         tools:targetApi="31">
         <activity
+            android:name=".configurarCuenta"
+            android:exported="false"
+            android:parentActivityName=".menu"/>
+        <activity
+            android:name=".fichaEncontrada"
+            android:exported="false"
+            android:parentActivityName=".editarFichas" />
+        <activity
+            android:name=".editarFichas"
+            android:exported="false"
+            android:parentActivityName=".menu" />
+        <activity
+            android:name=".verFichas"
+            android:exported="false"
+            android:parentActivityName=".menu" />
+        <activity
+            android:name=".crearFicha"
+            android:exported="false"
+            android:parentActivityName=".menu" />
+        <activity
+            android:name=".menu"
+            android:exported="false" />
+        <activity
             android:name=".Registrarse"
             android:exported="false"
-            android:theme="@style/Theme.FichAppSin"/>
+            android:theme="@style/Theme.FichAppSin" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -23,11 +23,31 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <!--menu opciones-->
-    <string name="galeria">Galeria</string>
-    <string name="tomarfoto">Toma una fotografía</string>
+    <!--menu appbar-->
+    <string name="ajustes">Configurar cuenta</string>
     <string name="cerrarsesion">Cerrar Sesión</string>
     <!--tomar foto-->
     <string name="etiquetafoto">Para tomar una fotografía, seleccione el siguiente ícono</string>
     <string name="img">img</string>
+    <!--menu-->
+    <string name="menu">Menú de opciones</string>
+    <string name="crear">Crear Ficha</string>
+    <string name="ver">Ver Fichas</string>
+    <string name="editar">Editar Fichas</string>
+    <!--crear ficha-->
+    <string name="btncrear">Guardar Ficha</string>
+    <!--editar ficha-->
+    <string name="btnbuscar">Buscar</string>
+    <string name="nbuscar">N° de ficha</string>
+    <!--ficha encontrada-->
+    <string name="titulo">Ficha número:</string>
+    <string name="btnfoto">Tomar foto</string>
+    <string name="btnConfirmar">Confirmar</string>
+    <string name="btnEliminar">Eliminar</string>
+    <!--ver fichas-->
+    <string name="titulover">Listado de Fichas</string>
+    <!--Configurar cuenta-->
+    <string name="tituloconfiguracion">Configuración de la cuenta</string>
+    <string name="btnCambiar">Guardar cambios</string>
+    <string name="ncontra">Nueva contraseña</string>
 </resources>

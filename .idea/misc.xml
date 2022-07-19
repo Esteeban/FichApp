@@ -6,8 +6,15 @@
         <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.215" />
         <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/drawable/borde_casillas.xml" value="0.236" />
         <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/drawable/bordes_casillas.xml" value="0.236" />
+        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_configurar_cuenta.xml" value="0.2" />
+        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_crear_ficha.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_editar_fichas.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_ficha_encontrada.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_main.xml" value="0.2296875" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_registrarse.xml" value="0.1" />
+        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_registrarse.xml" value="0.16" />
+        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_ver_fichas.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/menu/menu_overflow.xml" value="0.253125" />
       </map>
     </option>
   </component>

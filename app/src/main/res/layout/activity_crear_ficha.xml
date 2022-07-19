@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_10"
-    tools:context=".Registrarse">
+    tools:context=".crearFicha">
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/registro"
+        android:text="@string/crear"
         android:textColor="@color/white"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -120,10 +120,9 @@
     <Button
         android:id="@+id/btncamara"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:background="@drawable/bordes_casillas"
-        android:text="@string/registrarse"
-        android:onClick="registrarse"
+        android:text="@string/btncrear"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
