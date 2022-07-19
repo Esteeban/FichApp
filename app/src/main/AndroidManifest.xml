@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fichapp">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,8 +18,13 @@
         android:theme="@style/Theme.FichApp"
         tools:targetApi="31">
         <activity
+            android:name=".Registrarse"
+            android:exported="false"
+            android:theme="@style/Theme.FichAppSin"/>
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.FichAppSin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
