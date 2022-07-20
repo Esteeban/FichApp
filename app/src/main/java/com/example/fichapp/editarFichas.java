@@ -6,19 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class editarFichas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_editar_fichas);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-    public void Registrar(View view){
-        Intent intent = new Intent(this, Registrarse.class);
-        startActivity(intent);
-    }
-    public void Ingresar(View view){
-        Intent intent = new Intent(this, menu.class);
+    public void FichaEncontrada(View view){
+        Intent intent = new Intent(this, fichaEncontrada.class);
         startActivity(intent);
     }
     //Deshabilitar botón back de android
