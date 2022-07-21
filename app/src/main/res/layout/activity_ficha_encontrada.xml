@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.058" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/num_ficha"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/bordes_casillas"
@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/name"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/bordes_casillas"
@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.311" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/surname"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/bordes_casillas"
@@ -70,7 +70,7 @@
         app:layout_constraintVertical_bias="0.413" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/email"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/bordes_casillas"
@@ -86,7 +86,7 @@
         app:layout_constraintVertical_bias="0.515" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/phone"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/bordes_casillas"
@@ -102,7 +102,7 @@
         app:layout_constraintVertical_bias="0.618" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/date"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/bordes_casillas"
@@ -118,7 +118,7 @@
         app:layout_constraintVertical_bias="0.721" />
 
     <Button
-        android:id="@+id/btncamara"
+        android:id="@+id/btn_addFicha"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/bordes_casillas"
@@ -134,7 +134,7 @@
         app:layout_constraintVertical_bias="0.825" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/text_numficha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nombre"
@@ -147,7 +147,7 @@
         app:layout_constraintVertical_bias="0.159" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/text_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/apellido"
@@ -160,7 +160,7 @@
         app:layout_constraintVertical_bias="0.267" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/text_surname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rusuario"
@@ -173,7 +173,7 @@
         app:layout_constraintVertical_bias="0.368" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/text_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/correo"
@@ -186,7 +186,7 @@
         app:layout_constraintVertical_bias="0.465" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/text_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rcontrasena"
@@ -199,7 +199,7 @@
         app:layout_constraintVertical_bias="0.565" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/text_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/confcontrasena"
@@ -213,32 +213,32 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:background="@drawable/bordes_casillas"
+        android:layout_width="155dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/red_30"
         android:text="@string/btnEliminar"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/light_blue"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/btn_addFicha"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="155dp"
-        android:layout_height="40dp"
-        android:background="@drawable/bordes_casillas"
+        android:layout_height="50dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/green"
         android:drawableRight="@drawable/ic_check"
         android:text="@string/btnConfirmar"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
+        android:textColor="@color/blue_10"
+        app:cornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_addFicha" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
