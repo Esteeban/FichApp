@@ -1,54 +1,85 @@
 package com.example.fichapp.model;
 
 public class Usuario {
-    String name, surname, user_name,email, password;
+    String nombre_paciente, apellido_paciente, correo, direccion, numero_ficha, estado, fecha, telefono;
     public Usuario(){}
 
-    public Usuario(String name, String surname, String user_name, String email, String password) {
-        this.name = name;
-        this.surname = surname;
-        this.user_name = user_name;
-        this.email = email;
-        this.password = password;
+    public Usuario(String nombre_paciente, String apellido_paciente, String correo, String direccion, String numero_ficha, String estado, String fecha, String telefono) {
+        this.nombre_paciente = nombre_paciente;
+        this.apellido_paciente = apellido_paciente;
+        this.correo = correo;
+        this.direccion = direccion;
+        this.numero_ficha = numero_ficha;
+        this.estado = estado;
+        this.fecha = fecha;
+        this.telefono = telefono;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre_paciente() {
+        return nombre_paciente;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre_paciente(String nombre_paciente) {
+        this.nombre_paciente = nombre_paciente;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getApellido_paciente() {
+        return apellido_paciente;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setApellido_paciente(String apellido_paciente) {
+        this.apellido_paciente = apellido_paciente;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
-    public String getPassword() {
-        return password;
+    public String getNumero_ficha() {
+        return numero_ficha;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setNumero_ficha(String numero_ficha) {
+        this.numero_ficha = numero_ficha;
     }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+
 }
+
+
