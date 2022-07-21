@@ -34,7 +34,7 @@
             android:exported="false"
             android:parentActivityName=".menu" />
         <activity
-            android:name=".crearFicha"
+            android:name=".CrearFicha"
             android:exported="false"
             android:parentActivityName=".menu" />
         <activity

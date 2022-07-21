@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/drawable/bordes_casillas.xml" value="0.302" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_crear_ficha.xml" value="0.33" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_editar_fichas.xml" value="0.34322916666666664" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_ficha_encontrada.xml" value="0.5" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_registrarse.xml" value="0.3654891304347826" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_ver_fichas.xml" value="0.3458333333333333" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/view_usuario_single.xml" value="0.1" />
       </map>
     </option>
   </component>

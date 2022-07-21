@@ -15,7 +15,7 @@ public class fichaEncontrada extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ficha_encontrada);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        btncamara = findViewById(R.id.btncamara);
+        btncamara = findViewById(R.id.btn_addFicha);
 
         btncamara.setOnClickListener(new View.OnClickListener() {
             @Override

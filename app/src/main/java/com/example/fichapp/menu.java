@@ -17,7 +17,7 @@ public class menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
     }
     public void CrearFicha(View view){
-        Intent intent = new Intent(this, crearFicha.class);
+        Intent intent = new Intent(this, CrearFicha.class);
         startActivity(intent);
     }
     public void VerFichas(View view){
