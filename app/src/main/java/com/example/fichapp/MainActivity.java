@@ -36,32 +36,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-    }
-
-    /**
-     * getUser() función para obtener desde la base de datos un usuario en específico
-     * @param user_name nombre de usuario ingresado en el login
-     */
-    public void getUser(String user_name) {
-        DocumentReference user = db.collection("Usuarios").document(user_name);
-        user.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if(task.isSuccessful()){
-                    DocumentSnapshot usuario = task.getResult();
-                    if(usuario.exists()){
-                        Log.d(TAG, "DocumentSnapshot data: " + usuario.getData());
-                        usuario_login = usuario.get("contrasena").toString();
-                    } else {
-                        Log.d(TAG, "No such document");
-                        Toast.makeText(getApplicationContext(), "No está registrado", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    Log.d(TAG, "get failed with ", task.getException());
-                }
-            }
-        });
     }
 
     /**
@@ -78,17 +52,9 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }else{
             Toast.makeText(getApplicationContext(), "Ingrese contrasena correcta", Toast.LENGTH_SHORT).show();
+            Log.d("password", usuario_login);
             return false;
         }
-    }
-
-    /**
-     *
-     * @param view
-     */
-    public void Registrar(View view){
-        Intent intent = new Intent(this, Registrarse.class);
-        startActivity(intent);
     }
 
     /**
@@ -119,10 +85,34 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
+
+    /**
+     * getUser() función para obtener desde la base de datos un usuario en específico
+     * @param user_name nombre de usuario ingresado en el login
+     */
+    public void getUser(String user_name) {
+        DocumentReference user = db.collection("Usuarios").document(user_name);
+        user.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot usuario = task.getResult();
+                    if(usuario.exists()){
+                        Log.d(TAG, "DocumentSnapshot data: " + usuario.getData());
+                        usuario_login = usuario.get("contrasena").toString();
+                        Log.d("password login", usuario_login);
+                    } else {
+                        Log.d(TAG, "No such document");
+                        Toast.makeText(getApplicationContext(), "No está registrado", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
+                }
+            }
+        });
+    }
+
     //Deshabilitar botón back de android
     @Override
     public void onBackPressed(){
