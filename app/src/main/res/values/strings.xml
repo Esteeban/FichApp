@@ -6,6 +6,7 @@
     <string name="btnIngresar">Ingresar</string>
     <string name="noregistrado">¿No está registrado?</string>
     <string name="registrar"><u>Registrese aquí</u></string>
+    <string name="vacio"></string>
     <!--Activity registro-->
     <string name="registro">Registro</string>
     <string name="hintusuario">Ingrese usuario</string>
@@ -35,19 +36,32 @@
     <string name="ver">Ver Fichas</string>
     <string name="editar">Editar Fichas</string>
     <!--crear ficha-->
+    <string name="numeroFicha">N° de Ficha</string>
+    <string name="direccion">Dirección</string>
+    <string name="telefono">N° de contacto</string>
+    <string name="estado">Estado</string>
+    <string name="fecha">Fecha</string>
     <string name="btncrear">Guardar Ficha</string>
     <!--editar ficha-->
     <string name="btnbuscar">Buscar</string>
     <string name="nbuscar">N° de ficha</string>
     <!--ficha encontrada-->
-    <string name="titulo">Ficha número:</string>
+    <string name="titulo">Editar Ficha</string>
     <string name="btnfoto">Tomar foto</string>
     <string name="btnConfirmar">Confirmar</string>
     <string name="btnEliminar">Eliminar</string>
+
     <!--ver fichas-->
     <string name="titulover">Listado de Fichas</string>
     <!--Configurar cuenta-->
     <string name="tituloconfiguracion">Configuración de la cuenta</string>
     <string name="btnCambiar">Guardar cambios</string>
     <string name="ncontra">Nueva contraseña</string>
+
+    <!--estados-->
+    <string name="pendiente">Pendiente</string>
+    <string name="encamino">En camino</string>
+    <string name="entregado">Entregado</string>
+
+
 </resources>

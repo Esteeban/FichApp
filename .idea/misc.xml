@@ -3,18 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.215" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/drawable/borde_casillas.xml" value="0.236" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/drawable/bordes_casillas.xml" value="0.236" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_configurar_cuenta.xml" value="0.2" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_crear_ficha.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_editar_fichas.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_ficha_encontrada.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_main.xml" value="0.2296875" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_registrarse.xml" value="0.16" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/layout/activity_ver_fichas.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/diego/StudioProjects/FichApp/app/src/main/res/menu/menu_overflow.xml" value="0.253125" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/drawable/bordes_casillas.xml" value="0.302" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_configurar_cuenta.xml" value="0.33" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_crear_ficha.xml" value="0.22" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_editar_fichas.xml" value="0.5" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_ficha_encontrada.xml" value="0.5" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_menu.xml" value="0.25" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_registrarse.xml" value="0.33" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_ver_fichas.xml" value="0.3458333333333333" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/listadofichas.xml" value="0.22" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/view_usuario_single.xml" value="0.1" />
+        <entry key="..\:/Documentos/Proyectos/FichApp/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/nico_/AndroidStudioProjects/FichApp/app/src/main/res/layout/activity_crear_ficha.xml" value="0.24230072463768115" />
+        <entry key="..\:/Users/nico_/AndroidStudioProjects/FichApp/app/src/main/res/layout/activity_ficha_encontrada.xml" value="0.18478260869565216" />
+        <entry key="..\:/Users/nico_/AndroidStudioProjects/FichApp/app/src/main/res/layout/activity_main.xml" value="0.24230072463768115" />
+        <entry key="..\:/Users/nico_/AndroidStudioProjects/FichApp/app/src/main/res/layout/activity_menu.xml" value="0.18478260869565216" />
+        <entry key="..\:/Users/nico_/AndroidStudioProjects/FichApp/app/src/main/res/layout/activity_registrarse.xml" value="0.24230072463768115" />
+        <entry key="..\:/Users/nico_/AndroidStudioProjects/FichApp/app/src/main/res/layout/activity_ver_fichas.xml" value="0.25" />
+        <entry key="..\:/Users/nico_/AndroidStudioProjects/FichApp/app/src/main/res/layout/diseno_ficha.xml" value="0.5" />
+        <entry key="..\:/Users/nico_/AndroidStudioProjects/FichApp/app/src/main/res/layout/diseno_ver.xml" value="0.2" />
       </map>
     </option>
   </component>
