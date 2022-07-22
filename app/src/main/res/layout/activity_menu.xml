@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.134" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_buscarficha"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:background="@drawable/bordes_casillas"
