@@ -1,11 +1,15 @@
 package com.example.fichapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -13,9 +17,11 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -24,16 +30,32 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
+import java.io.ByteArrayOutputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 public class fichaEncontrada extends AppCompatActivity {
-    Button btncamara, btneditar, btneliminar;
+    Button btncamara, bGalery, btneditar, btneliminar;
     TextView numficha;
     EditText edit_name, edit_surname, edit_email, edit_address, edit_phone;
     Spinner estado;
+
+    public String ficha_global;
+    String refImagenGuardar;
+    private ImageView imageView;
+    private StorageReference mStorage;
+    private static final int GALLERY_INTENT=2;
+    private static final int TAKE_PICTURE=1;
+    private static final int REQUEST_PERMISSIONS_CAMERA=100;
+    private static final int REQUEST_PERMISSIONS_WRITE_STORAGE=200;
+    Bitmap bitmap;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     @Override
@@ -42,6 +64,7 @@ public class fichaEncontrada extends AppCompatActivity {
         setContentView(R.layout.activity_ficha_encontrada);
 
         btncamara = findViewById(R.id.btn_edituser);
+        bGalery = findViewById(R.id.btngaleria);
         btneditar = findViewById(R.id.button_editar);
         btneliminar = findViewById(R.id.button_eliminar);
 
@@ -52,6 +75,18 @@ public class fichaEncontrada extends AppCompatActivity {
         edit_address = findViewById(R.id.direccion_f_e);
         edit_phone = findViewById(R.id.contacto_f_e);
         estado = findViewById(R.id.spinner_estado);
+
+        mStorage = FirebaseStorage.getInstance().getReference();
+        bGalery.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View view) {
+                                           Intent intent = new Intent(Intent.ACTION_PICK);
+                                           intent.setType("image/*");
+                                           startActivityForResult(intent,GALLERY_INTENT);
+                                       }
+        });
+
+
 
         //Array para el spinner de definir el estado de la ficha
         ArrayList<String> listaEstado = new ArrayList<>();
@@ -114,12 +149,13 @@ public class fichaEncontrada extends AppCompatActivity {
             String edit_ficha_phone = edit_phone.getText().toString().trim();
             String estado_selected = estado.getSelectedItem().toString();
 
+
             @Override
             public void onClick(View view) {
                 if( edit_ficha_name.isEmpty() || edit_ficha_surname.isEmpty() || edit_ficha_email.isEmpty() || edit_ficha_address.isEmpty() || edit_ficha_phone.isEmpty() ){
                     Toast.makeText(getApplicationContext(), "Ingrese todos los datos", Toast.LENGTH_SHORT).show();
                 }else{
-                    edit_ficha(edit_ficha_num,edit_ficha_name,edit_ficha_surname,edit_ficha_email,edit_ficha_address,edit_ficha_phone,estado_selected);
+                    edit_ficha(edit_ficha_num,edit_ficha_name,edit_ficha_surname,edit_ficha_email,edit_ficha_address,edit_ficha_phone,estado_selected,refImagenGuardar);
                     startActivity(intent);
                 }
             }
@@ -136,7 +172,7 @@ public class fichaEncontrada extends AppCompatActivity {
      * @param phone
      * @param estado_f
      */
-    public void edit_ficha(String num,String name, String surname, String email, String address, String phone, String estado_f){
+    public void edit_ficha(String num,String name, String surname, String email, String address, String phone, String estado_f, String refImagen){
         Map<String, Object> ficha = new HashMap<>();
         ficha.put("nombre_paciente",name);
         ficha.put("apellido_paciente",surname);
@@ -144,6 +180,7 @@ public class fichaEncontrada extends AppCompatActivity {
         ficha.put("direccion",address);
         ficha.put("telefono",phone);
         ficha.put("estado", estado_f);
+        ficha.put("imagen", refImagen);
 
         db.collection("Fichas").document(num).update(ficha).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -214,6 +251,76 @@ public class fichaEncontrada extends AppCompatActivity {
             startActivityForResult(intent,1);
         }
     }
+
+    public void enviarImagen(Bitmap bitmap)
+    {
+
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference();
+
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy_HH:mm:ss");
+        Date date = new Date();
+        String fecha = formatter.format(date);
+        StorageReference refImagen = storageRef.child(fecha+".jpg");
+        refImagenGuardar= "https://firebasestorage.googleapis.com/v0/b/"+refImagen.getBucket() + refImagen.getPath();
+
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+
+        byte[] data = baos.toByteArray();
+
+        UploadTask uploadTask = refImagen.putBytes(data);
+
+        uploadTask.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                Toast.makeText(fichaEncontrada.this,"Error",Toast.LENGTH_SHORT).show();// Handle unsuccessful uploads
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                Toast.makeText(fichaEncontrada.this, "Imagen cargada exitosamente", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+    public void tomarFoto(View view) {
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(intent, TAKE_PICTURE);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == TAKE_PICTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap bitmap = (Bitmap) extras.get("data");
+
+            enviarImagen(bitmap);
+        }
+        if (resultCode == RESULT_OK && requestCode == GALLERY_INTENT) {
+            Uri uri = data.getData();
+
+            StorageReference filePath = mStorage.child("Fotos_Fichas").child(uri.getLastPathSegment());
+            filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    Toast.makeText(fichaEncontrada.this, "Foto subida exitosamente", Toast.LENGTH_SHORT).show();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(fichaEncontrada.this, "Error al subir imagen", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
+
+
     //Deshabilitar botón back de android
     @Override
     public void onBackPressed(){
