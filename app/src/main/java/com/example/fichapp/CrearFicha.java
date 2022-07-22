@@ -60,7 +60,7 @@ public class CrearFicha extends AppCompatActivity {
         });
     }
 
-    public void crear_ficha(View view){
+    public void crearficha(View view){
         Intent intent = new Intent(this, menu.class);
 
         num = findViewById(R.id.num_ficha);
@@ -71,7 +71,7 @@ public class CrearFicha extends AppCompatActivity {
         phone = findViewById(R.id.phone);
         date = findViewById(R.id.date);
 
-        button_add = findViewById(R.id.btn_addFicha);
+        button_add = findViewById(R.id.button_crear_ficha);
 
         button_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +93,5 @@ public class CrearFicha extends AppCompatActivity {
             }
         });
     }
-
-
 
 }

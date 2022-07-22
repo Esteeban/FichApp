@@ -24,11 +24,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firestore.v1.FirestoreGrpc;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class fichaEncontrada extends AppCompatActivity {
@@ -43,14 +41,14 @@ public class fichaEncontrada extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ficha_encontrada);
 
-        btncamara = findViewById(R.id.btn_addFicha);
+        btncamara = findViewById(R.id.btn_edituser);
         btneditar = findViewById(R.id.button_editar);
         btneliminar = findViewById(R.id.button_eliminar);
 
         numficha = findViewById(R.id.numfichatitulo);
         edit_name = findViewById(R.id.nombre_f_e);
         edit_surname = findViewById(R.id.apellido_f_e);
-        edit_email = findViewById(R.id.email);
+        edit_email = findViewById(R.id.conf_email);
         edit_address = findViewById(R.id.direccion_f_e);
         edit_phone = findViewById(R.id.contacto_f_e);
         estado = findViewById(R.id.spinner_estado);
@@ -65,7 +63,7 @@ public class fichaEncontrada extends AppCompatActivity {
         estado.setAdapter(adapter);
 
 
-        //se obtiene un dato de la vista editarFichas donde llega el numero de ficha, se podria mandar una ficha entera
+        //se obtiene un dato de la vista editarFichas donde llega el numero de ficha
         String valor = getIntent().getStringExtra("numero_ficha");
         Log.d("numficha",valor);
         numficha.setText(valor);
