@@ -26,7 +26,7 @@ public class verFichas extends AppCompatActivity {
         mFirestore = FirebaseFirestore.getInstance();
         mRecycler = findViewById(R.id.recyclerViewSingle);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
-        Query query = mFirestore.collection("Usuario");
+        Query query = mFirestore.collection("Fichas");
 
         FirestoreRecyclerOptions<Usuario> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Usuario>().setQuery(query, Usuario.class).build();
 
