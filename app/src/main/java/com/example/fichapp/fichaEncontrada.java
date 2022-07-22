@@ -47,7 +47,6 @@ public class fichaEncontrada extends AppCompatActivity {
     EditText edit_name, edit_surname, edit_email, edit_address, edit_phone;
     Spinner estado;
 
-    public String ficha_global;
     String refImagenGuardar;
     private ImageView imageView;
     private StorageReference mStorage;

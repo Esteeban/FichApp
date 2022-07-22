@@ -30,6 +30,7 @@
         android:drawableLeft="@drawable/ic_mail"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:textColor="@color/dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,6 +58,7 @@
         android:drawableLeft="@drawable/ic_user"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="@color/dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +73,7 @@
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/ic_telefono"
         android:ems="10"
+        android:textColor="@color/dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,6 +89,7 @@
         android:drawableLeft="@drawable/ic_direccion"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="@color/dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,7 +123,7 @@
         android:id="@+id/btn_edituser"
         android:layout_width="220dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/bordes_casillas"
         android:drawableLeft="@drawable/ic_camara"
         android:onClick="tomarFoto"
@@ -129,7 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_estado" />
 
     <Button
         android:id="@+id/button_editar"
@@ -142,6 +146,7 @@
         android:onClick="subirCambios"
         android:text="@string/btnConfirmar"
         android:textColor="@color/blue_10"
+        android:textSize="12sp"
         app:cornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_edituser" />
@@ -168,6 +173,7 @@
         android:drawableLeft="@drawable/ic_user"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="@color/dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -178,12 +184,12 @@
         android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/bordes_casillas"
         android:drawableLeft="@drawable/ic_galeria"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/btn_edituser"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_estado" />
 
     <Button
         android:id="@+id/button_eliminar"
@@ -196,6 +202,8 @@
         android:text="@string/btnEliminar"
         android:textColor="@color/light_blue"
         app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
         app:layout_constraintStart_toEndOf="@+id/button_editar"
         app:layout_constraintTop_toBottomOf="@+id/btn_edituser"
         tools:ignore="TouchTargetSizeCheck" />
@@ -238,30 +246,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contacto_f_e" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cardView"
+    <Spinner
+        android:id="@+id/spinner_estado"
         android:layout_width="300dp"
         android:layout_height="40dp"
+        android:layout_marginTop="3dp"
         android:background="@drawable/bordes_casillas"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="@color/blue_10"
+        android:paddingStart="10dp"
+        android:tooltipText="Seleccione estado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_estado">
-
-        <Spinner
-            android:id="@+id/spinner_estado"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/blue_10"
-            android:paddingStart="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/text_estado"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

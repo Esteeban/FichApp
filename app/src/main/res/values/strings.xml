@@ -46,7 +46,7 @@
     <string name="btnbuscar">Buscar</string>
     <string name="nbuscar">N° de ficha</string>
     <!--ficha encontrada-->
-    <string name="titulo">Editar Ficha</string>
+    <string name="titulo">Buscar Ficha</string>
     <string name="btnfoto">Tomar foto</string>
     <string name="btnConfirmar">Confirmar</string>
     <string name="btnEliminar">Eliminar</string>
