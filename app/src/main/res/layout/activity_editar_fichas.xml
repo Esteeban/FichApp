@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.222" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/text_buscarficha"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/bordes_casillas"
@@ -43,13 +43,13 @@
         android:layout_height="wrap_content"
         android:text="@string/nbuscar"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        app:layout_constraintBottom_toTopOf="@+id/text_buscarficha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_buscarficha"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:background="@drawable/bordes_casillas"
