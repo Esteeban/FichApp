@@ -36,7 +36,7 @@ public class UsuarioAdapter extends FirestoreRecyclerAdapter<Usuario, UsuarioAda
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_ver_fichas, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.diseno_ficha, parent, false);
         return new ViewHolder(v);
     }
 
