@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/conf_email"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="3dp"
@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/conf_email" />
 
     <EditText
         android:id="@+id/nombre_f_e"
@@ -116,7 +116,7 @@
         app:layout_constraintTop_toBottomOf="@+id/apellido_f_e" />
 
     <Button
-        android:id="@+id/btn_addFicha"
+        android:id="@+id/btn_edituser"
         android:layout_width="220dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
@@ -143,7 +143,7 @@
         android:textColor="@color/blue_10"
         app:cornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_addFicha" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_edituser" />
 
     <TextView
         android:id="@+id/text_name"
@@ -181,7 +181,7 @@
         android:background="@drawable/bordes_casillas"
         android:drawableLeft="@drawable/ic_galeria"
         android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/btn_addFicha"
+        app:layout_constraintStart_toEndOf="@+id/btn_edituser"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <Button
@@ -196,7 +196,7 @@
         android:textColor="@color/light_blue"
         app:cornerRadius="20dp"
         app:layout_constraintStart_toEndOf="@+id/button_editar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_addFicha"
+        app:layout_constraintTop_toBottomOf="@+id/btn_edituser"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView

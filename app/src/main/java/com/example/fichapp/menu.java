@@ -11,10 +11,13 @@ import android.widget.Toast;
 
 public class menu extends AppCompatActivity {
 
+    String user_name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        user_name = getIntent().getStringExtra("user_name");
     }
     public void CrearFicha(View view){
         Intent intent = new Intent(this, CrearFicha.class);
@@ -40,6 +43,7 @@ public class menu extends AppCompatActivity {
         return true;
     }
     public boolean onOptionsItemSelected(MenuItem item){
+
         int id=item.getItemId();
         if(id==R.id.id_ajustes){
             Toast.makeText(this,"Configuración de cuenta de usuario",Toast.LENGTH_SHORT).show();
@@ -56,6 +60,7 @@ public class menu extends AppCompatActivity {
     }
     public void cuenta(View view){
         Intent intent = new Intent(this, configurarCuenta.class);
+        intent.putExtra("user_name", user_name);
         startActivity(intent);
     }
 }
